@@ -2,7 +2,7 @@
 
 [![Travis-CI Build Status](https://api.travis-ci.org/bjyoungblood/BjyAuthorize.png?branch=master)](https://travis-ci.org/bjyoungblood/BjyAuthorize)
 
-This module is designed provide a facade for `Zend\Permissions\Acl` that will
+This module is designed to provide a facade for `Zend\Permissions\Acl` that will
 ease its usage with modules and applications. By default, it provides simple
 setup via config files or by using `Zend\Db` or Doctrine ORM/ODM (via ZfcUserDoctrineORM).
 
@@ -29,7 +29,7 @@ And here's how it would look like with BjyAuthorize enabled:
 
 ### Composer
 
-The suggested installation method is via [composer](http://getcomposer.org/):
+The recommended installation method is via [composer](http://getcomposer.org/):
 
 ```sh
 php composer.phar require bjyoungblood/bjy-authorize:1.2.*
@@ -95,7 +95,7 @@ return array(
          */
         'role_providers' => array(
 
-            /* here, 'guest' and 'user are defined as top-level roles, with
+            /* here, 'guest' and 'user' are defined as top-level roles, with
              * 'admin' inheriting from user
              */
             'BjyAuthorize\Provider\Role\Config' => array(
@@ -186,7 +186,7 @@ In either a controller or a view script, you can call
 ```$this->isAllowed($resource[, $privilege])```, which will query the ACL
 using the currently authenticated (or default) user's roles.
 
-Whenever you need to stop processing your action you can throw an UnAuthorizedException and users will see you message on a 403 page.
+Whenever you need to stop processing your action you can throw an UnAuthorizedException and users will see your message on a 403 page.
 
 ```php
 function cafeAction() {
